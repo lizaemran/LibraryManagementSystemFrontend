@@ -28,12 +28,12 @@ const BookDetail = ({ users, books }) => {
         <div  style={{flexWrap:'wrap', backgroundColor:'#ADA9F3',display:"flex",justifyContent:"center", alignItems:"center", flexDirection:"column", width:"100vw", height:"100vh"}}>
         <h2>Book Detail</h2>'
         <div style={{border:'2px solid #6C63FF', padding:'20px 50px', backgroundColor:'#6C63FF', color:'white', borderRadius:'5px', textAlign:'center'}}>
-        <h2>{book[0].name}</h2>
-        <p>{book[0].author}</p>
+        <h2>{book[0]?.name}</h2>
+        <p>{book[0]?.author}</p>
         {book[0]?.user_id && <p>Date Of Borrow {book[0]?.dateOfBorrow}</p> }
          {book[0]?.user_id && <p>Date Of Return {book[0]?.dateOfReturn}</p>}
         {book[0]?.user_id && <p>Borrowed by Student Roll No. {book[0]?.user_id}</p>}
-        {!book[0]?.user_id && <p>Borrow by: {users.map(user => <span style={{backgroundColor:'#4c47b2', margin:'2px', padding:'5px 7.5px',  borderRadius:'5px', cursor:'pointer'}} onClick={() => {updateBookHandler(user.id,book[0].name,book[0].author)}} >{user.id}</span>)}</p>}
+        {!book[0]?.user_id && <p>Borrow by: {users?.map(user => <span style={{backgroundColor:'#4c47b2', margin:'2px', padding:'5px 7.5px',  borderRadius:'5px', cursor:'pointer'}} onClick={() => {updateBookHandler(user?.id,book[0]?.name,book[0]?.author)}} >{user?.id}</span>)}</p>}
         </div>
         </div>
     );
