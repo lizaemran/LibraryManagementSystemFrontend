@@ -13,7 +13,6 @@ import Home from './Pages/Home';
 function App() {
   const [users, setUsers] = useState([]);
   const [books, setBooks] = useState([]);
-
   useEffect( () => {
      axios.get("http://localhost:5000/api/users/")
     .then(res => {

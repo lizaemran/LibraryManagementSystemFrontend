@@ -11,11 +11,12 @@ const BookDetail = ({ users, books }) => {
             name: b_name,
             author: b_author,
             user_id: u_id,
-            dateOfBorrow: new Date().split("T")[0],
-            dateOfReturn: new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 7)).split("T")[0]
+            dateOfBorrow: new Date(),
+            dateOfReturn: new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 7))
         };
         axios.put(`http://localhost:5000/api/books/${bookId}`, body)
             .then(res => {
+                window.location.href='/';
                 console.log(res);
             })
             .catch(err => {

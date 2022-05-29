@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import library from "../Media/library.svg";
 const Home = () => {
-
     return (
         <div style={{backgroundColor:'#ADA9F3', width:"100vw", height:"100vh",display:"flex",justifyContent:"center", alignItems:"center", flexDirection:"column",}}>
         <div style={{textAlign:"center"}}>
